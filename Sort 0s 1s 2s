@@ -1,0 +1,32 @@
+import java.util.* ;
+import java.io.*; 
+public class Solution 
+{
+    public static void sort012(int[] arr)
+    {
+        int curr=0;
+        int nextzero=0;     //position of zeros
+        int nexttwo=arr.length-1;      //pos of two
+        
+        while(curr<=nexttwo){
+            if(arr[curr]==2){
+              //  int temp=arr[]
+                arr[curr]=arr[nexttwo];
+                arr[nexttwo]=2;
+                nexttwo--;
+               
+            }
+           else if(arr[curr]==0){
+              //  int temp=arr[]
+                arr[curr]=arr[nextzero];
+                arr[nextzero]=0;
+                nextzero++;
+                curr++;
+                
+            }
+            else{
+                curr++;
+            }
+        }
+    }
+}
